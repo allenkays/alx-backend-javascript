@@ -51,5 +51,3 @@ Class HolbertonCourse {
 }
 
 export default HolbertonCourse;
-
-}
