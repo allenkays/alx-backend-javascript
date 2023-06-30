@@ -5,7 +5,7 @@ class Currency {
   }
 
   validateString(value) {
-    if (typeof value !== 'string') {
+    if (typeof (this._code || typeof this._name) !== 'string') {
       throw new TypeError('Invalid type. Expected a string.');
     }
     return value;
