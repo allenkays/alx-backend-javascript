@@ -10,3 +10,13 @@ interface Teacher {
 interface Directors extends Teacher {
   numberOfReports: number;
 }
+
+interface PrintTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+const printTeacher: PrintTeacherFunction = (firstName, lastName) => {
+  const initial = firstName.charAt(0).toUpperCase();
+  const fullName = `${initial}. ${lastName}`;
+  return fullName;
+}
