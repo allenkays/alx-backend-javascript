@@ -14,3 +14,5 @@ program.on('line', (username) => {
 program.on('close', () => {
   console.log('This important software is now closing')
 });
+
+module.export = program;
