@@ -12,7 +12,7 @@ program.on('line', (username) => {
 });
 
 program.on('close', () => {
-  console.log('This important software is now closing');
+  console.log('This important software is now closing\n');
 });
 
 module.export = program;
