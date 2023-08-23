@@ -9,15 +9,17 @@ class StudentsController {
       );
       let response = 'This is the list of our students\n';
 
-      for (let i = 0; i < fields.length; i++) {
-        const field = fields[i];
-        const students = studentsByFields[field];
-        response += `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`;
-        
-        if (i < fields.length - 1) {
-          response += '\n'; // Add a newline after each field except the last one
+      for (const fieldIndex in fields) {
+        if (fieldIndex) {
+          const field = fields[fieldIndex];
+          const students = studentsByFields[field];
+          response += `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`;
+          if (fieldIndex < fields.length - 1) {
+            response += '\n'; // Add a newline after each field except the last one
+          }
         }
       }
+
       res.status(200).send(response);
     } catch (error) {
       res.status(500).send('Cannot load the database');
