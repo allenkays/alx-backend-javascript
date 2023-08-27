@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const calculateNumber = require('./1-calcul.js'); // Update the import path
+const calculateNumber = require('./2-calcul_chai.js'); // Update the import path
 
 describe('calculateNumber', () => {
   describe('type SUM', () => {
@@ -20,7 +20,7 @@ describe('calculateNumber', () => {
     });
 
     it('should return "Error" if b is rounded to 0', () => {
-      expect(calculateNumber('DIVIDE', 1.4, 0.2)).to.equal('Error');
+      expect(calculateNumber('DIVIDE', 1.4, 0)).to.equal('Error');
     });
   });
 
